@@ -1,0 +1,294 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <DrawingBrush x:Key="ExcelExtensionScopeIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="ExcelScope.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="CopyAsPitcureIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="CopyAsPicture.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="ActivateSheetIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="ActivateSheet.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="AutoFillIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="AutoFill.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="AutoFitIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="AutoFit.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="ChangeFormatIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="Format.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="ClearContentIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="Clear.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+
+    <DrawingBrush x:Key="DeleteSheetIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="DeleteSheet.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="FillColorIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="FillColor.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="FindAllIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="FindAll.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="FontStyleIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="Style.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="GetActiveCellIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="ActivateSheet.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="GetLastColumnIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="GetColumn.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="GetLastRowIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="GetRow.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="GetSheetsIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="ActivateSheet.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="GoToIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="GoTo.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="InsertOrDeleteIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="InsertDelete.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="MergeIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="Merge.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="ReadCellIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="ReadWrite.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="RefreshAllIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="RefreshAll.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="SaveIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="Save.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="SelectRangeIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="SelectRange.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="SetZoomIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="SetZoom.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    <DrawingBrush x:Key="WriteCellIcon">
+        <DrawingBrush.Drawing>
+            <ImageDrawing>
+                <ImageDrawing.Rect>
+                    <Rect Location="0,0" Size="25,25" ></Rect>
+                </ImageDrawing.Rect>
+                <ImageDrawing.ImageSource>
+                    <BitmapImage UriSource="ReadWrite.png" />
+                </ImageDrawing.ImageSource>
+            </ImageDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+    
+
+
+</ResourceDictionary>

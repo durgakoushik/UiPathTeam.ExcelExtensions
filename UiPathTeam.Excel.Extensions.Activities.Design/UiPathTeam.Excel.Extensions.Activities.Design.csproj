@@ -1,0 +1,286 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <TargetFrameworks>net6.0-windows7.0;net45</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+		<RootNamespace>UiPathTeam.Excel.Extensions.Activities.Design</RootNamespace>
+		<AssemblyName>UiPathTeam.Excel.Extensions.Activities.Design</AssemblyName>
+    <PackageId>UiPathTeam.Excel.Extensions.Activities</PackageId>
+    <EnableDefaultPageItems>false</EnableDefaultPageItems>
+  </PropertyGroup>
+  <!-- Package Metadata -->
+  <PropertyGroup>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	<PackageLicenseUrl>https://www.uipath.com/assets/downloads/open-platform-license-agreement</PackageLicenseUrl>
+    <!--<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>-->
+    <Description>This .Net Workflow Activity library allows easy integration with Excel. The Activities will mimic human actions. It also works with large excel files</Description>
+    <Authors>Abdullah Al-Awlaqi</Authors>
+    <Company>UiPath</Company>
+    <Copyright>© 2023 Company</Copyright>
+    <PackageTags>UiPath, Excel, Studio</PackageTags>
+    <PackageProjectUrl>https://docs.uipath.com/integrations/docs/how-to-create-activities</PackageProjectUrl>
+    <PackageIconUrl>http://www.uipath.com/hubfs/Logos/uipath-nuget-logo.png</PackageIconUrl>
+    <!--<PackageIcon>packageIcon.png</PackageIcon>--> <!--PackageIcon not yet supported in UiPath Studio-->
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+  </PropertyGroup>
+  <!-- Package Versions -->
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug' AND '$(DesignTimeBuild)' != 'true'">
+    <PackageVersion>0.1.0.$([System.DateTime]::UtcNow.ToString(MMddHHmmss))</PackageVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <PackageVersion>2.0.4</PackageVersion>
+  </PropertyGroup>
+  <ItemGroup>
+	  <None Remove="Designers\ActivateSheetDesigner.xaml" />
+	  <None Remove="Designers\AutoFillDesigner.xaml" />
+	  <None Remove="Designers\AutoFitDesigner.xaml" />
+	  <None Remove="Designers\ChangeFormatDesigner.xaml" />
+	  <None Remove="Designers\ClearDesigner.xaml" />
+	  <None Remove="Designers\DeleteSheetDesigner.xaml" />
+	  <None Remove="Designers\ExcelExtensionScopeDesigner.xaml" />
+	  <None Remove="Designers\CopyAsPictureDesigner.xaml" />
+	  <None Remove="Designers\FillColorDesigner.xaml" />
+	  <None Remove="Designers\FindAllDesigner.xaml" />
+	  <None Remove="Designers\FontStyleDesigner.xaml" />
+	  <None Remove="Designers\GetLastColumnDesigner.xaml" />
+	  <None Remove="Designers\GetLastRowDesigner.xaml" />
+	  <None Remove="Designers\GetSheetsDesigner.xaml" />
+	  <None Remove="Designers\GetValueDesigner.xaml" />
+	  <None Remove="Designers\GoToDesigner.xaml" />
+	  <None Remove="Designers\InsertIDeleteDesigner.xaml" />
+	  <None Remove="Designers\MergeDesigner.xaml" />
+	  <None Remove="Designers\ReadCellDesigner.xaml" />
+	  <None Remove="Designers\RefreshAllDesigner.xaml" />
+	  <None Remove="Designers\SaveDesigner.xaml" />
+	  <None Remove="Designers\SelectRangeDesigner.xaml" />
+	  <None Remove="Designers\SetZoomDesigner.xaml" />
+	  <None Remove="Designers\WriteCellDesigner.xaml" />
+    <None Remove="icon.png" />
+    <None Remove="Themes\ActivateSheet.png" />
+    <None Remove="Themes\AutoFill.png" />
+    <None Remove="Themes\AutoFit.png" />
+    <None Remove="Themes\Clear.png" />
+    <None Remove="Themes\CopyAsPicture.png" />
+    <None Remove="Themes\DeleteSheet.png" />
+    <None Remove="Themes\ExcelScope.png" />
+    <None Remove="Themes\FillColor.png" />
+    <None Remove="Themes\FindAll.png" />
+    <None Remove="Themes\Format.png" />
+    <None Remove="Themes\GetColumn.png" />
+    <None Remove="Themes\GetRow.png" />
+    <None Remove="Themes\GoTo.png" />
+    <None Remove="Themes\InsertDelete.png" />
+    <None Remove="Themes\Merge.png" />
+    <None Remove="Themes\ReadWrite.png" />
+    <None Remove="Themes\RefreshAll.png" />
+    <None Remove="Themes\Save.png" />
+    <None Remove="Themes\SelectRange.png" />
+    <None Remove="Themes\SetZoom.png" />
+    <None Remove="Themes\Style.png" />
+  </ItemGroup>
+  <!-- Package Icon -->
+  <!--<ItemGroup>-->
+    <!--<None Include="packageIcon.png" Pack="true" Visible="false" PackagePath="" />
+  </ItemGroup>-->
+  <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
+    <ItemGroup>
+      <!--Filter out unnecessary files-->
+      <_ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'All'))" />
+    </ItemGroup>
+
+    <!--Print batches for debug purposes-->
+    <Message Text="Batch for .nupkg: ReferenceCopyLocalPaths = @(_ReferenceCopyLocalPaths), ReferenceCopyLocalPaths.DestinationSubDirectory = %(_ReferenceCopyLocalPaths.DestinationSubDirectory) Filename = %(_ReferenceCopyLocalPaths.Filename) Extension = %(_ReferenceCopyLocalPaths.Extension)" Importance="High" Condition="'@(_ReferenceCopyLocalPaths)' != ''" />
+
+    <ItemGroup>
+      <!--Add file to package with consideration of sub folder. If empty, the root folder is chosen.-->
+      <BuildOutputInPackage Include="@(_ReferenceCopyLocalPaths)" TargetPath="%(_ReferenceCopyLocalPaths.DestinationSubDirectory)" />
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <DocumentationFile>bin\$(Configuration)\UiPathTeam.Excel.Extensions.Activities.Design.xml</DocumentationFile>
+    <OutputType>Library</OutputType>
+    <IncludeSymbols>True</IncludeSymbols>
+    <Title>UiPathTeam.Excel.Extensions.Activities</Title>
+    <!--<ApplicationIcon>ExcelScope.png</ApplicationIcon>-->
+    <!--<PackageIcon>icon.png</PackageIcon>-->
+  </PropertyGroup>
+  <ItemGroup>
+    <Resource Include="icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </Resource>
+    <Resource Include="Themes\ActivateSheet.png" />
+    <Resource Include="Themes\AutoFill.png" />
+    <Resource Include="Themes\AutoFit.png" />
+    <Resource Include="Themes\Clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Themes\CopyAsPicture.png" />
+    <Resource Include="Themes\DeleteSheet.png" />
+    <Resource Include="Themes\ExcelScope.png" />
+    <Resource Include="Themes\FillColor.png" />
+    <Resource Include="Themes\FindAll.png" />
+    <Resource Include="Themes\Format.png" />
+  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="UiPath.Workflow" Version="6.0.0-20230913-01" PrivateAssets="All" Condition=" '$(TargetFramework)' == 'net6.0-windows7.0' " />
+		<PackageReference Include="System.Activities.Core.Presentation" Version="6.0.0-*" PrivateAssets="All" Condition=" '$(TargetFramework)' == 'net6.0-windows7.0' " />
+
+		<Reference Include="PresentationCore" PrivateAssets="All" Condition=" '$(TargetFramework)' == 'net45' " />
+		<Reference Include="PresentationFramework" PrivateAssets="All" Condition=" '$(TargetFramework)' == 'net45' " />
+		<Reference Include="System.Activities" PrivateAssets="All" Condition=" '$(TargetFramework)' == 'net45' " />
+		<Reference Include="System.Activities.Presentation" PrivateAssets="All" Condition=" '$(TargetFramework)' == 'net45' " />
+		<Reference Include="System.Activities.Core.Presentation" PrivateAssets="All" Condition=" '$(TargetFramework)' == 'net45' " />
+		<Reference Include="System.ComponentModel.DataAnnotations" PrivateAssets="All" Condition=" '$(TargetFramework)' == 'net45' " />
+		<Reference Include="System.Xaml" PrivateAssets="All" Condition=" '$(TargetFramework)' == 'net45' " />
+		<Reference Include="System.Xml.Linq" PrivateAssets="All" Condition=" '$(TargetFramework)' == 'net45' " />
+		<Reference Include="System.Data.DataSetExtensions" PrivateAssets="All" Condition=" '$(TargetFramework)' == 'net45' " />
+		<Reference Include="WindowsBase" PrivateAssets="All" Condition=" '$(TargetFramework)' == 'net45' " />
+	</ItemGroup>
+	<!--<Choose>
+		<When Condition=" '$(TargetFramework)' == 'net6.0-windows7.0' ">
+			<ItemGroup>
+				<PackageReference Include="UiPath.Workflow" Version="6.0.0-20230913-01" PrivateAssets="All" />
+				<PackageReference Include="System.Activities.Core.Presentation" Version="6.0.0-*" PrivateAssets="All" />
+
+			</ItemGroup>
+		</When>
+		<When Condition=" '$(TargetFramework)' == 'net45' ">
+			<ItemGroup>
+				<Reference Include="PresentationCore" PrivateAssets="All" />
+				<Reference Include="PresentationFramework" PrivateAssets="All" />
+				<Reference Include="System.Activities" PrivateAssets="All" />
+				<Reference Include="System.Activities.Presentation" PrivateAssets="All" />
+				<Reference Include="System.Activities.Core.Presentation" PrivateAssets="All" />
+				<Reference Include="System.ComponentModel.DataAnnotations" PrivateAssets="All" />
+				<Reference Include="System.Xaml" PrivateAssets="All" />
+				<Reference Include="System.Xml.Linq" PrivateAssets="All" />
+				<Reference Include="System.Data.DataSetExtensions" PrivateAssets="All" />
+				<Reference Include="WindowsBase" PrivateAssets="All" />
+			</ItemGroup>
+		</When>
+	</Choose>-->
+  <!--<ItemGroup>
+    <PackageReference Include="UiPath.Workflow" Version="6.0.0-20230913-01" PrivateAssets="All" />
+    <PackageReference Include="System.Activities.Core.Presentation" Version="6.0.0-*" PrivateAssets="All" />
+  </ItemGroup>-->
+  <ItemGroup>
+    <Page Include="..\Shared\Themes\Generic.xaml">
+      <Link>Themes\Generic.xaml</Link>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Resource Include="Themes\GetColumn.png" />
+    <Resource Include="Themes\GetRow.png" />
+    <Resource Include="Themes\GoTo.png" />
+    <Page Include="Designers\ActivateSheetDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\AutoFillDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\AutoFitDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\ChangeFormatDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\ClearDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\DeleteSheetDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\ExcelExtensionScopeDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+	  <Page Include="Designers\CopyAsPictureDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+	  <Page Include="Designers\FillColorDesigner.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </Page>
+	  <Page Include="Designers\FindAllDesigner.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </Page>
+	  <Page Include="Designers\FontStyleDesigner.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </Page>
+	  <Page Include="Designers\GetLastColumnDesigner.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </Page>
+	  <Page Include="Designers\GetLastRowDesigner.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </Page>
+	  <Page Include="Designers\GetSheetsDesigner.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </Page>
+	  <Page Include="Designers\GetValueDesigner.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </Page>
+	  <Page Include="Designers\GoToDesigner.xaml">
+	    <Generator>XamlIntelliSenseFileGenerator</Generator>
+	  </Page>
+	  <Page Include="Designers\InsertIDeleteDesigner.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </Page>
+	  <Page Include="Designers\MergeDesigner.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </Page>
+	  <Page Include="Designers\ReadCellDesigner.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </Page>
+	  <Page Include="Designers\RefreshAllDesigner.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </Page>
+	  <Page Include="Designers\SaveDesigner.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </Page>
+	  <Page Include="Designers\SelectRangeDesigner.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </Page>
+	  <Page Include="Designers\SetZoomDesigner.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </Page>
+	  <Page Include="Designers\WriteCellDesigner.xaml">
+	    <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+	  </Page>
+    <Page Include="Themes\Icons.xaml">
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Resource Include="Themes\InsertDelete.png" />
+    <Resource Include="Themes\Merge.png" />
+    <Resource Include="Themes\ReadWrite.png" />
+    <Resource Include="Themes\RefreshAll.png" />
+    <Resource Include="Themes\Save.png" />
+    <Resource Include="Themes\SelectRange.png" />
+    <Resource Include="Themes\SetZoom.png" />
+    <Resource Include="Themes\Style.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UiPathTeam.Excel.Extensions.Activities\UiPathTeam.Excel.Extensions.Activities.csproj" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.*.resx">
+      <DependentUpon>Resources.resx</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="..\Shared\UiPath.Shared.Activities.Design\UiPath.Shared.Activities.Design.projitems" Label="Shared" />
+</Project>

@@ -1,0 +1,77 @@
+﻿<sap:ActivityDesigner x:Class="UiPathTeam.Excel.Extensions.Activities.Design.Designers.InsertIDeleteDesigner"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:activity="clr-namespace:UiPathTeam.Excel.Extensions.Activities.Properties;assembly=UiPathTeam.Excel.Extensions.Activities"
+    xmlns:sap="clr-namespace:System.Activities.Presentation;assembly=System.Activities.Presentation"
+    xmlns:sapv="clr-namespace:System.Activities.Presentation.View;assembly=System.Activities.Presentation"
+    xmlns:sapc="clr-namespace:System.Activities.Presentation.Converters;assembly=System.Activities.Presentation"
+    xmlns:converters="clr-namespace:UiPath.Shared.Activities.Design.Converters"
+    xmlns:uip="clr-namespace:UiPath.Shared.Activities.Design.Controls" >
+
+    <sap:ActivityDesigner.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="..\Themes\Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <sapc:ArgumentToExpressionConverter x:Key="ArgumentToExpressionConverter" />
+            <converters:ActivityIconConverter x:Key="ActivityIconConverter" />
+        </ResourceDictionary>
+    </sap:ActivityDesigner.Resources>
+
+    <sap:ActivityDesigner.Icon>
+        <DrawingBrush Stretch="Uniform" Drawing="{Binding Path=ModelItem, Converter={StaticResource ActivityIconConverter}, ConverterParameter=pack://application:\,\,\,/UiPathTeam.Excel.Extensions.Activities.Design;component/themes/icons.xaml}" />
+    </sap:ActivityDesigner.Icon>
+    <DockPanel Width="250">
+        <Grid>
+            <Grid>
+                <Grid.Style>
+                    <Style>
+                        <Setter Property="Grid.Visibility" Value="Visible" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=ShowExpanded}" Value="true">
+                                <Setter Property="Grid.Visibility" Value="Collapsed" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontStyle="Italic" Foreground="#FF6D6D6D">Double-click to view</TextBlock>
+            </Grid>
+            <Grid>
+                <Grid.Style>
+                    <Style>
+                        <Setter Property="Grid.Visibility" Value="Visible" />
+                        <Setter Property="Grid.MinWidth" Value="200" />
+
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=ShowExpanded}" Value="false">
+                                <Setter Property="Grid.MinWidth" Value="30" />
+                                <Setter Property="Grid.Visibility" Value="Collapsed" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"></ColumnDefinition>
+                        <ColumnDefinition Width="10*"></ColumnDefinition>
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Grid.Column="0">InsertOrDelete</TextBlock>
+                    <ComboBox Grid.Row="0" Grid.Column="1" Name="cbInsertOrDelete" SelectedValue="{Binding Path=ModelItem.InsertOrDelete, Mode=TwoWay}"></ComboBox>
+
+                    <TextBlock Grid.Row="1" Grid.Column="0">RowOrColumn</TextBlock>
+                    <ComboBox Grid.Row="1" Grid.Column="1" Name="cbRowOrColumn" SelectedValue="{Binding Path=ModelItem.RowOrColumn, Mode=TwoWay}"></ComboBox>
+
+                </Grid>
+            </Grid>
+        </Grid>
+   
+
+    </DockPanel>
+    
+</sap:ActivityDesigner>
