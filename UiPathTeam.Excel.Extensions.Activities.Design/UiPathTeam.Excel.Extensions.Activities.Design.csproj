@@ -33,11 +33,19 @@
     <PackageVersion>2.0.4</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="Designers\TestDesigner.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
 	  <None Remove="Designers\ActivateSheetDesigner.xaml" />
 	  <None Remove="Designers\AutoFillDesigner.xaml" />
 	  <None Remove="Designers\AutoFitDesigner.xaml" />
 	  <None Remove="Designers\ChangeFormatDesigner.xaml" />
 	  <None Remove="Designers\ClearDesigner.xaml" />
+	  <None Remove="Designers\ConvertRangeToHTMLCodeDesigner.xaml" />
+	  <None Remove="Designers\DeleteBetweenColumnsDesigner.xaml" />
+	  <None Remove="Designers\DeleteDuplicateColumnsDesigner.xaml" />
+	  <None Remove="Designers\DeleteEmptyColumnsDesigner.xaml" />
+	  <None Remove="Designers\DeleteEmptyRowsDesigner.xaml" />
 	  <None Remove="Designers\DeleteSheetDesigner.xaml" />
 	  <None Remove="Designers\ExcelExtensionScopeDesigner.xaml" />
 	  <None Remove="Designers\CopyAsPictureDesigner.xaml" />
@@ -56,6 +64,7 @@
 	  <None Remove="Designers\SaveDesigner.xaml" />
 	  <None Remove="Designers\SelectRangeDesigner.xaml" />
 	  <None Remove="Designers\SetZoomDesigner.xaml" />
+	  <None Remove="Designers\TestDesigner.xaml" />
 	  <None Remove="Designers\WriteCellDesigner.xaml" />
     <None Remove="icon.png" />
     <None Remove="Themes\ActivateSheet.png" />
@@ -173,6 +182,21 @@
       <Generator>XamlIntelliSenseFileGenerator</Generator>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Page>
+    <Page Include="Designers\ConvertRangeToHTMLCodeDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\DeleteBetweenColumnsDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\DeleteDuplicateColumnsDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\DeleteEmptyColumnsDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\DeleteEmptyRowsDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Resource Include="Themes\GetColumn.png" />
     <Resource Include="Themes\GetRow.png" />
