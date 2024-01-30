@@ -115,7 +115,7 @@ namespace UiPathTeam.Excel.Extensions.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Converts Range to HTML Code.
+        ///   Looks up a localized string similar to Converts selected range to HTML Code.Users need to choose the range prior to employing this operation.
         /// </summary>
         public static string ConvertRangeToHTMLCode_Description {
             get {
@@ -124,29 +124,11 @@ namespace UiPathTeam.Excel.Extensions.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ConvertRangeToHTMLCode.
+        ///   Looks up a localized string similar to Convert Range To HTML Code.
         /// </summary>
         public static string ConvertRangeToHTMLCode_DisplayName {
             get {
                 return ResourceManager.GetString("ConvertRangeToHTMLCode_DisplayName", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Delete columns between the columns.
-        /// </summary>
-        public static string DeleteBetweenColumns_Description {
-            get {
-                return ResourceManager.GetString("DeleteBetweenColumns_Description", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Delete Between Columns.
-        /// </summary>
-        public static string DeleteBetweenColumns_DisplayName {
-            get {
-                return ResourceManager.GetString("DeleteBetweenColumns_DisplayName", resourceCulture);
             }
         }
         
@@ -169,7 +151,7 @@ namespace UiPathTeam.Excel.Extensions.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Deletes empty columns in the Range.
+        ///   Looks up a localized string similar to Removes columns without content within the specified range. Users need to choose the range prior to employing this operation..
         /// </summary>
         public static string DeleteEmptyColumns_Description {
             get {
@@ -187,7 +169,7 @@ namespace UiPathTeam.Excel.Extensions.Activities.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Deletes Empty Rows from the range.
+        ///   Looks up a localized string similar to Deletes empty rows from the selected range.Users need to choose the range prior to employing this operation.
         /// </summary>
         public static string DeleteEmptyRows_Description {
             get {

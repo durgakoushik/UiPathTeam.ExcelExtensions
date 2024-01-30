@@ -16,7 +16,7 @@
 	<Choose>
 		<When Condition=" '$(TargetFramework)' == 'net6.0-windows7.0' ">
 			<ItemGroup>
-				<PackageReference Include="UiPath.Workflow" Version="6.0.0-20230913-01" PrivateAssets="All" />
+				<PackageReference Include="UiPath.Workflow" Version="6.0.0-20240126-02" PrivateAssets="All" />
 				<PackageReference Include="System.Activities.Core.Presentation" Version="6.0.0-*" PrivateAssets="All" />
 
 				
@@ -39,7 +39,6 @@
 	</Choose>
  
 	<ItemGroup>
-	  <Compile Remove="Activities\DeleteBetweenColumns.cs" />
 	  <Compile Remove="Activities\Test.cs" />
 	</ItemGroup>
  

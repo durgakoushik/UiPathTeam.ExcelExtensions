@@ -42,7 +42,6 @@
 	  <None Remove="Designers\ChangeFormatDesigner.xaml" />
 	  <None Remove="Designers\ClearDesigner.xaml" />
 	  <None Remove="Designers\ConvertRangeToHTMLCodeDesigner.xaml" />
-	  <None Remove="Designers\DeleteBetweenColumnsDesigner.xaml" />
 	  <None Remove="Designers\DeleteDuplicateColumnsDesigner.xaml" />
 	  <None Remove="Designers\DeleteEmptyColumnsDesigner.xaml" />
 	  <None Remove="Designers\DeleteEmptyRowsDesigner.xaml" />
@@ -71,7 +70,11 @@
     <None Remove="Themes\AutoFill.png" />
     <None Remove="Themes\AutoFit.png" />
     <None Remove="Themes\Clear.png" />
+    <None Remove="Themes\convertrangetohtml.png" />
     <None Remove="Themes\CopyAsPicture.png" />
+    <None Remove="Themes\deleteduplicatecolumns.png" />
+    <None Remove="Themes\deleteemptycolumns.png" />
+    <None Remove="Themes\deleteemptyrow.png" />
     <None Remove="Themes\DeleteSheet.png" />
     <None Remove="Themes\ExcelScope.png" />
     <None Remove="Themes\FillColor.png" />
@@ -125,9 +128,13 @@
     <Resource Include="Themes\AutoFill.png" />
     <Resource Include="Themes\AutoFit.png" />
     <Resource Include="Themes\Clear.png" />
+    <Resource Include="Themes\convertrangetohtml.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Themes\CopyAsPicture.png" />
+    <Resource Include="Themes\deleteduplicatecolumns.png" />
+    <Resource Include="Themes\deleteemptycolumns.png" />
+    <Resource Include="Themes\deleteemptyrow.png" />
     <Resource Include="Themes\DeleteSheet.png" />
     <Resource Include="Themes\ExcelScope.png" />
     <Resource Include="Themes\FillColor.png" />
@@ -135,7 +142,7 @@
     <Resource Include="Themes\Format.png" />
   </ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="UiPath.Workflow" Version="6.0.0-20230913-01" PrivateAssets="All" Condition=" '$(TargetFramework)' == 'net6.0-windows7.0' " />
+		<PackageReference Include="UiPath.Workflow" Version="6.0.0-20240126-02" PrivateAssets="All" Condition=" '$(TargetFramework)' == 'net6.0-windows7.0' " />
 		<PackageReference Include="System.Activities.Core.Presentation" Version="6.0.0-*" PrivateAssets="All" Condition=" '$(TargetFramework)' == 'net6.0-windows7.0' " />
 
 		<Reference Include="PresentationCore" PrivateAssets="All" Condition=" '$(TargetFramework)' == 'net45' " />
@@ -184,9 +191,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Page>
     <Page Include="Designers\ConvertRangeToHTMLCodeDesigner.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </Page>
-    <Page Include="Designers\DeleteBetweenColumnsDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\DeleteDuplicateColumnsDesigner.xaml">

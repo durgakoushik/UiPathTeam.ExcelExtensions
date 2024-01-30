@@ -12,17 +12,17 @@ namespace UiPathTeam.Excel.Extensions.Activities
 {
     [LocalizedDisplayName(nameof(Resources.DeleteEmptyRows_DisplayName))]
     [LocalizedDescription(nameof(Resources.DeleteEmptyRows_Description))]
-    public class DeleteEmptyRows : ContinuableAsyncCodeActivity
+    public class DeleteEmptyRows : CodeActivity
     {
         #region Properties
 
         /// <summary>
         /// If set, continue executing the remaining activities even if the current activity has failed.
         /// </summary>
-        [LocalizedCategory(nameof(Resources.Common_Category))]
-        [LocalizedDisplayName(nameof(Resources.ContinueOnError_DisplayName))]
-        [LocalizedDescription(nameof(Resources.ContinueOnError_Description))]
-        public override InArgument<bool> ContinueOnError { get; set; }
+      //  [LocalizedCategory(nameof(Resources.Common_Category))]
+       // [LocalizedDisplayName(nameof(Resources.ContinueOnError_DisplayName))]
+        //[LocalizedDescription(nameof(Resources.ContinueOnError_Description))]
+        //public override InArgument<bool> ContinueOnError { get; set; }
 
         #endregion
 
@@ -44,7 +44,7 @@ namespace UiPathTeam.Excel.Extensions.Activities
             base.CacheMetadata(metadata);
         }
 
-        protected override async Task<Action<AsyncCodeActivityContext>> ExecuteAsync(AsyncCodeActivityContext context, CancellationToken cancellationToken)
+        protected override void Execute(CodeActivityContext context)
         {
             #region INIT
             var property = context.DataContext.GetProperties()[ExcelExtensionScope.ExcelTag];
@@ -69,8 +69,8 @@ namespace UiPathTeam.Excel.Extensions.Activities
                 excelProperty.workbook.Save();
             }
 
-            return (ctx) => {
-            };
+            //return (ctx) => {
+            //};
         }
 
         #endregion
