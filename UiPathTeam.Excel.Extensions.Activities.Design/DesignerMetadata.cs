@@ -118,7 +118,26 @@ namespace UiPathTeam.Excel.Extensions.Activities.Design
             builder.AddCustomAttributes(typeof(CloseSession), categoryAttribute);
             builder.AddCustomAttributes(typeof(WriteCell), new HelpKeywordAttribute(""));
 
+           // builder.AddCustomAttributes(typeof(DeleteDuplicateColumns), categoryAttribute);
+           // builder.AddCustomAttributes(typeof(DeleteDuplicateColumns), new DesignerAttribute(typeof(DeleteDuplicateColumnsDesigner)));
+          //  builder.AddCustomAttributes(typeof(DeleteDuplicateColumns), new HelpKeywordAttribute(""));
 
+
+            builder.AddCustomAttributes(typeof(DeleteDuplicateColumns), categoryAttribute);
+            builder.AddCustomAttributes(typeof(DeleteDuplicateColumns), new DesignerAttribute(typeof(DeleteDuplicateColumnsDesigner)));
+            builder.AddCustomAttributes(typeof(DeleteDuplicateColumns), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(DeleteEmptyColumns), categoryAttribute);
+            builder.AddCustomAttributes(typeof(DeleteEmptyColumns), new DesignerAttribute(typeof(DeleteEmptyColumnsDesigner)));
+            builder.AddCustomAttributes(typeof(DeleteEmptyColumns), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(DeleteEmptyRows), categoryAttribute);
+            builder.AddCustomAttributes(typeof(DeleteEmptyRows), new DesignerAttribute(typeof(DeleteEmptyRowsDesigner)));
+            builder.AddCustomAttributes(typeof(DeleteEmptyRows), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(ConvertRangeToHTMLCode), categoryAttribute);
+            builder.AddCustomAttributes(typeof(ConvertRangeToHTMLCode), new DesignerAttribute(typeof(ConvertRangeToHTMLCodeDesigner)));
+            builder.AddCustomAttributes(typeof(ConvertRangeToHTMLCode), new HelpKeywordAttribute(""));
 
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
