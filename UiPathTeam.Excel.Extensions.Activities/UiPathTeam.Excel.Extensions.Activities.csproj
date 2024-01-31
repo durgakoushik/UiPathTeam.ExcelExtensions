@@ -8,31 +8,23 @@
   <PropertyGroup>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <DocumentationFile>bin\$(Configuration)\UiPathTeam.Excel.Extensions.Activities.xml</DocumentationFile>
-    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
-  <ItemGroup>
-	  
-  </ItemGroup>
- 
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1001" />
+	</ItemGroup>
 	<Choose>
 		<When Condition=" '$(TargetFramework)' == 'net6.0-windows7.0' ">
 			<ItemGroup>
-				<PackageReference Include="UiPath.Workflow" Version="6.0.0-20230913-01" PrivateAssets="All" />
+				<PackageReference Include="UiPath.Workflow" Version="6.0.0-20240126-02" PrivateAssets="All" />
 				<PackageReference Include="System.Activities.Core.Presentation" Version="6.0.0-*" PrivateAssets="All" />
-				<COMReference Include="Microsoft.Office.Interop.Excel">
-					<WrapperTool>tlbimp</WrapperTool>
-					<VersionMinor>9</VersionMinor>
-					<VersionMajor>1</VersionMajor>
-					<Guid>00020813-0000-0000-c000-000000000046</Guid>
-					<Lcid>0</Lcid>
-					<Isolated>false</Isolated>
-					<EmbedInteropTypes>true</EmbedInteropTypes>
-				</COMReference>
-			</ItemGroup>
+
+				
+							</ItemGroup>
 		</When>
 		<When Condition=" '$(TargetFramework)' == 'net45' ">
 			<ItemGroup>
-				<PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1001" />
+				
 				<Reference Include="PresentationCore" PrivateAssets="All" />
 				<Reference Include="PresentationFramework" PrivateAssets="All" />
 				<Reference Include="System.Activities" PrivateAssets="All" />
@@ -45,6 +37,14 @@
 			</ItemGroup>
 		</When>
 	</Choose>
+ 
+	<ItemGroup>
+	  <Compile Remove="Activities\Test.cs" />
+	</ItemGroup>
+ 
+
+ 
+	
 	 <ItemGroup>
     <ProjectReference Include="..\UiPathTeam.Excel.Extensions\UiPathTeam.Excel.Extensions.csproj" PrivateAssets="All" />
 

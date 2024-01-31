@@ -115,6 +115,78 @@ namespace UiPathTeam.Excel.Extensions.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Converts selected range to HTML Code.Users need to choose the range prior to employing this operation.
+        /// </summary>
+        public static string ConvertRangeToHTMLCode_Description {
+            get {
+                return ResourceManager.GetString("ConvertRangeToHTMLCode_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Convert Range To HTML Code.
+        /// </summary>
+        public static string ConvertRangeToHTMLCode_DisplayName {
+            get {
+                return ResourceManager.GetString("ConvertRangeToHTMLCode_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deletes duplicate columns.
+        /// </summary>
+        public static string DeleteDuplicateColumns_Description {
+            get {
+                return ResourceManager.GetString("DeleteDuplicateColumns_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DeleteDuplicateColumns.
+        /// </summary>
+        public static string DeleteDuplicateColumns_DisplayName {
+            get {
+                return ResourceManager.GetString("DeleteDuplicateColumns_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Removes columns without content within the specified range. Users need to choose the range prior to employing this operation..
+        /// </summary>
+        public static string DeleteEmptyColumns_Description {
+            get {
+                return ResourceManager.GetString("DeleteEmptyColumns_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Empty Columns.
+        /// </summary>
+        public static string DeleteEmptyColumns_DisplayName {
+            get {
+                return ResourceManager.GetString("DeleteEmptyColumns_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deletes empty rows from the selected range.Users need to choose the range prior to employing this operation.
+        /// </summary>
+        public static string DeleteEmptyRows_Description {
+            get {
+                return ResourceManager.GetString("DeleteEmptyRows_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Empty Rows.
+        /// </summary>
+        public static string DeleteEmptyRows_DisplayName {
+            get {
+                return ResourceManager.GetString("DeleteEmptyRows_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Do.
         /// </summary>
         public static string Do {
@@ -201,6 +273,24 @@ namespace UiPathTeam.Excel.Extensions.Activities.Properties {
         public static string Output_Category {
             get {
                 return ResourceManager.GetString("Output_Category", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Test.
+        /// </summary>
+        public static string Test_Description {
+            get {
+                return ResourceManager.GetString("Test_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Test.
+        /// </summary>
+        public static string Test_DisplayName {
+            get {
+                return ResourceManager.GetString("Test_DisplayName", resourceCulture);
             }
         }
         

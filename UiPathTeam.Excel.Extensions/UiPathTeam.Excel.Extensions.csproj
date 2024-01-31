@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net45</TargetFrameworks>
+    <TargetFrameworks>net6.0-windows7.0;net45</TargetFrameworks>
 		<RootNamespace>UiPathTeam.Excel.Extensions</RootNamespace>
 		<AssemblyName>UiPathTeam.Excel.Extensions</AssemblyName>
   </PropertyGroup>
