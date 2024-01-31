@@ -1,11 +1,11 @@
 namespace UiPathTeam.Excel.Extensions.Activities.Design.Designers
 {
     /// <summary>
-    /// Interaction logic for DeleteBetweenColumnsDesigner.xaml
+    /// Interaction logic for DeleteEmptyRowsDesigner.xaml
     /// </summary>
-    public partial class DeleteBetweenColumnsDesigner
+    public partial class SetWidthAndHeightDesigner
     {
-        public DeleteBetweenColumnsDesigner()
+        public SetWidthAndHeightDesigner()
         {
             InitializeComponent();
         }

@@ -15,7 +15,7 @@
     <Description>This .Net Workflow Activity library allows easy integration with Excel. The Activities will mimic human actions. It also works with large excel files</Description>
     <Authors>Abdullah Al-Awlaqi</Authors>
     <Company>UiPath</Company>
-    <Copyright>© 2023 Company</Copyright>
+    <Copyright>© 2024 UiPath Internal Lab</Copyright>
     <PackageTags>UiPath, Excel, Studio</PackageTags>
     <PackageProjectUrl>https://docs.uipath.com/integrations/docs/how-to-create-activities</PackageProjectUrl>
     <PackageIconUrl>http://www.uipath.com/hubfs/Logos/uipath-nuget-logo.png</PackageIconUrl>
@@ -30,7 +30,7 @@
     <PackageVersion>0.1.0.$([System.DateTime]::UtcNow.ToString(MMddHHmmss))</PackageVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageVersion>2.0.4</PackageVersion>
+    <PackageVersion>2.1.0</PackageVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="Designers\TestDesigner.xaml.cs" />
@@ -62,6 +62,7 @@
 	  <None Remove="Designers\RefreshAllDesigner.xaml" />
 	  <None Remove="Designers\SaveDesigner.xaml" />
 	  <None Remove="Designers\SelectRangeDesigner.xaml" />
+	  <None Remove="Designers\SetWidthAndHeightDesigner.xaml" />
 	  <None Remove="Designers\SetZoomDesigner.xaml" />
 	  <None Remove="Designers\TestDesigner.xaml" />
 	  <None Remove="Designers\WriteCellDesigner.xaml" />
@@ -197,6 +198,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\DeleteEmptyColumnsDesigner.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </Page>
+    <Page Include="Designers\SetWidthAndHeightDesigner.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </Page>
     <Page Include="Designers\DeleteEmptyRowsDesigner.xaml">
