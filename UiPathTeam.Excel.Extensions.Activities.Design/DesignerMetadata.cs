@@ -138,6 +138,18 @@ namespace UiPathTeam.Excel.Extensions.Activities.Design
             builder.AddCustomAttributes(typeof(SetWidthAndHeight), new DesignerAttribute(typeof(SetWidthAndHeightDesigner)));
             builder.AddCustomAttributes(typeof(SetWidthAndHeight), new HelpKeywordAttribute(""));
 
+            builder.AddCustomAttributes(typeof(DeleteRowsBetweenValues), categoryAttribute);
+            builder.AddCustomAttributes(typeof(DeleteRowsBetweenValues), new DesignerAttribute(typeof(DeleteRowsBetweenValuesDesigner)));
+            builder.AddCustomAttributes(typeof(DeleteRowsBetweenValues), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(DeleteColumnsBetweenValues), categoryAttribute);
+            builder.AddCustomAttributes(typeof(DeleteColumnsBetweenValues), new DesignerAttribute(typeof(DeleteColumnsBetweenValuesDesigner)));
+            builder.AddCustomAttributes(typeof(DeleteColumnsBetweenValues), new HelpKeywordAttribute(""));
+
+            builder.AddCustomAttributes(typeof(ConvertColumnToValue), categoryAttribute);
+            builder.AddCustomAttributes(typeof(ConvertColumnToValue), new DesignerAttribute(typeof(ConvertColumnToValueDesigner)));
+            builder.AddCustomAttributes(typeof(ConvertColumnToValue), new HelpKeywordAttribute(""));
+
             MetadataStore.AddAttributeTable(builder.CreateTable());
         }
     }

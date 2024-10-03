@@ -115,6 +115,24 @@ namespace UiPathTeam.Excel.Extensions.Activities.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Removes formula from the column and retains the value .
+        /// </summary>
+        public static string ConvertColumnToValue_Description {
+            get {
+                return ResourceManager.GetString("ConvertColumnToValue_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ConvertColumnToValue.
+        /// </summary>
+        public static string ConvertColumnToValue_DisplayName {
+            get {
+                return ResourceManager.GetString("ConvertColumnToValue_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Converts selected range to HTML Code.Users need to choose the range prior to employing this operation.
         /// </summary>
         public static string ConvertRangeToHTMLCode_Description {
@@ -129,6 +147,24 @@ namespace UiPathTeam.Excel.Extensions.Activities.Properties {
         public static string ConvertRangeToHTMLCode_DisplayName {
             get {
                 return ResourceManager.GetString("ConvertRangeToHTMLCode_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deletes the columns mentioned between the values.
+        /// </summary>
+        public static string DeleteColumnsBetweenValues_Description {
+            get {
+                return ResourceManager.GetString("DeleteColumnsBetweenValues_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DeleteColumnsBetweenValues.
+        /// </summary>
+        public static string DeleteColumnsBetweenValues_DisplayName {
+            get {
+                return ResourceManager.GetString("DeleteColumnsBetweenValues_DisplayName", resourceCulture);
             }
         }
         
@@ -183,6 +219,24 @@ namespace UiPathTeam.Excel.Extensions.Activities.Properties {
         public static string DeleteEmptyRows_DisplayName {
             get {
                 return ResourceManager.GetString("DeleteEmptyRows_DisplayName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Deletes the rows between the values.
+        /// </summary>
+        public static string DeleteRowsBetweenValues_Description {
+            get {
+                return ResourceManager.GetString("DeleteRowsBetweenValues_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DeleteRowsBetweenValues.
+        /// </summary>
+        public static string DeleteRowsBetweenValues_DisplayName {
+            get {
+                return ResourceManager.GetString("DeleteRowsBetweenValues_DisplayName", resourceCulture);
             }
         }
         

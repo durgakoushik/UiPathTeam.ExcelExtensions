@@ -297,4 +297,28 @@
     <value>Deletes empty rows from the selected range.Users need to choose the range prior to employing this operation</value>
     <comment>activity description</comment>
   </data>
+  <data name="DeleteColumnsBetweenValues_DisplayName" xml:space="preserve">
+    <value>DeleteColumnsBetweenValues</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DeleteColumnsBetweenValues_Description" xml:space="preserve">
+    <value>Deletes the columns mentioned between the values</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="DeleteRowsBetweenValues_DisplayName" xml:space="preserve">
+    <value>DeleteRowsBetweenValues</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="DeleteRowsBetweenValues_Description" xml:space="preserve">
+    <value>Deletes the rows between the values</value>
+    <comment>activity description</comment>
+  </data>
+  <data name="ConvertColumnToValue_DisplayName" xml:space="preserve">
+    <value>ConvertColumnToValue</value>
+    <comment>activity name</comment>
+  </data>
+  <data name="ConvertColumnToValue_Description" xml:space="preserve">
+    <value>Removes formula from the column and retains the value </value>
+    <comment>activity description</comment>
+  </data>
 </root>
